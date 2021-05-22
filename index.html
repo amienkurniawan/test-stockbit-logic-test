@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>JavaScript Arrays Anagrams</h2>
+  <p id="demo"></p>
+  <script>
+
+    var words = ['kita', 'atik', 'tika', 'aku', 'kia', 'makan', 'kua'];
+
+    // let word1 = 'aku';
+    // let word2 = 'kia';
+
+    // word1 = word1.split("").sort().join("");
+    // word2 = word2.split("").sort().join("");
+
+    // lengthword1 = word1.length;
+    // lengthword2 = word2.length;
+
+    // var not_same = true;
+
+    // if (lengthword1 === lengthword2) {
+    //   let lengthword = lengthword2;
+
+    //   let includes = false;
+
+    //   for (j = 0; j < lengthword; j++) {
+    //     if (word1.includes(word2.charAt(j))) {
+    //       includes = true;
+    //     } else {
+    //       includes = false;
+    //       break
+    //     }
+    //   }
+
+    //   if (includes) {
+    //     not_same = false
+    //   } else {
+    //     not_same = true
+    //   }
+    // }
+
+
+    // if (not_same) {
+    //   console.log("bukan anagram")
+    // } else {
+    //   console.log("kedua kata termasuk ke anagram")
+    // }
+
+    // objectnya
+    var objectAnagrams = {};
+
+    for (var i in words) {
+      var word = words[i];
+
+      // mengurutkan kata berdasarkan abjadnya 
+      var key = word.split("").sort().join("");
+
+      // menggunakan kata yang sudah urut menjadi key yang unik
+      if (objectAnagrams[key] != null) {
+        objectAnagrams[key].push(word);
+      } else {
+        objectAnagrams[key] = [word];
+      }
+    }
+    console.log(objectAnagrams);
+
+    // memasukan object dari anagrams ke dalam array
+    var arrayAnagram = []
+    for (let properties in objectAnagrams) {
+      arrayAnagram.push(objectAnagrams[properties])
+    }
+
+    console.log(arrayAnagram);
+
+  </script>
+</body>
+
+</html>
