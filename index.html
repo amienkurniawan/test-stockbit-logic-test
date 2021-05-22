@@ -7,6 +7,7 @@
   <script>
 
     var words = ['kita', 'atik', 'tika', 'aku', 'kia', 'makan', 'kua'];
+    console.log("anagrams words", words)
 
     // let word1 = 'aku';
     // let word2 = 'kia';
@@ -63,7 +64,7 @@
         objectAnagrams[key] = [word];
       }
     }
-    console.log(objectAnagrams);
+
 
     // memasukan object dari anagrams ke dalam array
     var arrayAnagram = []
@@ -71,7 +72,7 @@
       arrayAnagram.push(objectAnagrams[properties])
     }
 
-    console.log(arrayAnagram);
+    console.log("result", arrayAnagram);
 
   </script>
 </body>
